@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,9 +22,13 @@ public class roaddown : MonoBehaviour {
         }
         if (transform.position.y < -10)
         {
+            try
+            { startFinish.SetActive(false); }
+            catch(Exception)
+            { }
             transform.position = new Vector3(0, 10, 0);
-            if (Manager.speed<1)
-            Manager.speed *= 2;
-        }
+            if (Manager.speed < 1)
+                Manager.speed *= 2;
+            }
 	}
 }
