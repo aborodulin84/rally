@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameScript : MonoBehaviour {
-    public static float speed = 0.01f;
-    public static bool go=true;
+    public float speed = 0.01f;
+    public bool go=true;
     // Use this for initialization
     
 }

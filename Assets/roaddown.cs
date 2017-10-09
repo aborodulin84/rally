@@ -7,7 +7,7 @@ public class roaddown : MonoBehaviour {
     [SerializeField]
     private GameObject startFinish;
     [SerializeField]
-   private GameObject Manager;
+   private GameScript Manager;
 	// Use this for initialization
 	void Start () {
         transform.position = new Vector3(0, transform.position.y - 1, 0);
@@ -15,14 +15,15 @@ public class roaddown : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (GameScript.go == true)
+        if (Manager.go == true)
         {
-            transform.position = new Vector3(0, transform.position.y - GameScript.speed, 0);
+            transform.position = new Vector3(0, transform.position.y - Manager.speed, 0);
         }
         if (transform.position.y < -10)
         {
             transform.position = new Vector3(0, 10, 0);
-            GameScript.speed *= 2;
+            if (Manager.speed<1)
+            Manager.speed *= 2;
         }
 	}
 }
