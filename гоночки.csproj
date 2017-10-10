@@ -90,8 +90,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameScript.cs" />
-    <Compile Include="Assets\roaddown.cs" />
+    <Compile Include="Assets\Scripts\CarScript.cs" />
+    <Compile Include="Assets\Scripts\GameScript.cs" />
+    <Compile Include="Assets\Scripts\roaddown.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
