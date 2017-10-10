@@ -7,6 +7,7 @@ public class roaddown : MonoBehaviour {
    
     [SerializeField]
     private GameObject startFinish;
+   
     [SerializeField]
    private GameScript Manager;
 	// Use this for initialization
